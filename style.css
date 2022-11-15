@@ -16,3 +16,19 @@ body{
 h1,h2,h3,h4{
     font-family: 'Oswald', sans-serif;
 }
+
+/* Transition d'état du passage de souis sur les liens du menu */
+.nav-link{
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 700ms, color 700ms, font-weight 700ms, text-decoration 700ms;
+}
+
+.nav-link:hover{
+    color: black !important;
+    background-color: white !important;
+    font-weight: bold !important;
+    border-radius: 5px;
+    text-decoration: underline;
+}
