@@ -1,9 +1,11 @@
 /* Importation des polices Noto sans et Oswald de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 /* Déclaration des polices
 font-family: 'Noto Sans', sans-serif;
-font-family: 'Oswald', sans-serif; 
+font-family: 'Oswald', sans-serif;
+font-family: 'Sacramento', cursive; 
 */
 
 body{
@@ -11,10 +13,11 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: justify;
 }
 
-h1,h2,h3,h4{
-    font-family: 'Oswald', sans-serif;
+h1,h2,h3,h4,p{
+    font-family: 'Sacramento', sans-serif;
 }
 
 /* Transition d'état du passage de souis sur les liens du menu */
@@ -31,4 +34,24 @@ h1,h2,h3,h4{
     font-weight: bold !important;
     border-radius: 5px;
     text-decoration: underline;
+}
+
+.image1{
+    height: 600px;
+    background-image: url("images/pizza-fromage.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+}
+
+.image2{
+    height: 600px;
+    background-image: url("images/pizza-tomate.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+}
+
+main{
+    font-size: 1.5rem;
 }
