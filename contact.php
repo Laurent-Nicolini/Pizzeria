@@ -14,6 +14,7 @@ session_start();
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="public/calendar.css">
   </head>
 <body>
     <header class="sticky-top">
@@ -55,7 +56,9 @@ session_start();
             </div>
             <div class="separation d-md-block d-none col-md-1"></div>
             <div class="separation2 d-block d-md-none col-1"></div>
-            <div class="reservation container col-md-5 col-sm-12">test</div>
+            <div class="reservation container col-md-5 col-sm-12">
+                <?php include "public/calendar.php"; ?>
+            </div>
         </div>
     </div>
     
