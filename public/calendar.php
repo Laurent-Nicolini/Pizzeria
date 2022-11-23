@@ -15,7 +15,7 @@ try{
 } ?>
 
 <div class="d-flex flex-row align-items-center justify-content-between mx-3">
-    <h1><?= $month->toString(); ?></h1>
+    <h3><?= $month->toString(); ?></h3>
     <div>
         <a href="contact.php?month=<?= $month->previousMonth()->month; ?>&year=<?= $month->previousMonth()->year; ?>" class="btn btn-success"><</a>
         <a href="contact.php?month=<?= $month->nextMonth()->month; ?>&year=<?= $month->nextMonth()->year; ?>" class="btn btn-success">></a>
@@ -33,10 +33,12 @@ try{
                 $date = (clone $start)->modify("+" . ($k + $i * 7) . " days");
             ?>
             <td class="<?= $month->withinMonth($date) ? '' : 'calendar__othermonth'; ?>">
-                <?php if ($i === 0): ?>
-                <div class="calendar__weekday"><?= $day; ?></div>
-                <?php endif; ?>
-                <div class="calendar__day"><?= $date->format('d'); ?></div>
+                <a href="reservation.php">
+                    <?php if ($i === 0): ?>
+                        <div class="calendar__weekday"><?= $day; ?></div>
+                    <?php endif; ?>
+                        <div class="calendar__day text-center mt-2"><?= $date->format('d'); ?></div>
+                </a>
             </td>            
             <?php endforeach; ?>
         </tr>
