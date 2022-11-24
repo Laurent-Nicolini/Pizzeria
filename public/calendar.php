@@ -33,7 +33,7 @@ try{
                 $date = (clone $start)->modify("+" . ($k + $i * 7) . " days");
             ?>
             <td class="<?= $month->withinMonth($date) ? '' : 'calendar__othermonth'; ?>">
-                <a class="lien_table <?= $month->withinMonth($date) ? '' : ' disabled' ;?>" href="<?= $month->withinMonth($date) ? "reservation.php?day={$date->format('d')}&month={$month->toString()}" : '#' ;?>" >
+                <a class="lien_table <?= $month->withinMonth($date) ? '' : ' disabled'; ?>" href="<?= $month->withinMonth($date) ? "reservation.php?day={$day}&date={$date->format('d')}&month={$month->toString()}" : '#' ;?>" >
                     <?php if ($i === 0): ?>
                         <div class="calendar__weekday"><?= $day; ?></div>
                     <?php endif; ?>
