@@ -17,8 +17,8 @@ try{
 <div class="d-flex flex-row align-items-center justify-content-between mx-3">
     <h3><?= $month->toString(); ?></h3>
     <div>
-        <a href="contact.php?month=<?= $month->previousMonth()->month; ?>&year=<?= $month->previousMonth()->year; ?>" class="btn btn-success"><</a>
-        <a href="contact.php?month=<?= $month->nextMonth()->month; ?>&year=<?= $month->nextMonth()->year; ?>" class="btn btn-success">></a>
+        <a href="contact.php?month=<?= $month->previousMonth()->month; ?>&year=<?= $month->previousMonth()->year; ?>" class="btn btn-outline-success"><</a>
+        <a href="contact.php?month=<?= $month->nextMonth()->month; ?>&year=<?= $month->nextMonth()->year; ?>" class="btn btn-outline-success">></a>
     </div>
 
 </div>
@@ -33,7 +33,7 @@ try{
                 $date = (clone $start)->modify("+" . ($k + $i * 7) . " days");
             ?>
             <td class="<?= $month->withinMonth($date) ? '' : 'calendar__othermonth'; ?>">
-                <a href="reservation.php">
+                <a class="lien_table <?= $month->withinMonth($date) ? '' : ' disabled' ;?>" href="<?= $month->withinMonth($date) ? "reservation.php?day={$date->format('d')}&month={$month->toString()}" : '#' ;?>" >
                     <?php if ($i === 0): ?>
                         <div class="calendar__weekday"><?= $day; ?></div>
                     <?php endif; ?>

@@ -14,7 +14,7 @@ class Month {
 
     /**
      * Month constructor
-     * @param $month / mois compris entre et 12
+     * @param $month / mois compris entre 1 et 12
      * @param $year / l'année
      * @throws \Exception
      */

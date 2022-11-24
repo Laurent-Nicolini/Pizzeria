@@ -1,5 +1,21 @@
-.erservation{
+.reservation{
     font-family: 'Noto Sans', sans-serif !important;
+}
+
+td{
+    overflow: hidden;
+}
+
+.lien_table{
+    position: relative;
+}
+
+/* Lien sur toute la cellule */
+.lien_table::before{
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 500px;
 }
 
 .calendar__table{
