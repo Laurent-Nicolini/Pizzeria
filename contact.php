@@ -36,6 +36,20 @@ session_start();
     <br>
     <h2 class="text-center">Contact & Réservation</h2>
     <br>
+    <?php
+      if (isset($_GET['validation']) && isset($_COOKIE['res_date'])){ ?>
+
+        <div class="text-center text-white font-weight-bold bg-success">Votre réservation du <?=$_COOKIE['res_date'];?> pour <?=$_COOKIE['res_personnes'];?> personne(s) à <?=$_COOKIE['res_heure'];?>H est bien confirmée et nous vous en remercions.</div><br>
+
+      <?php }
+    if (isset($_COOKIE['res_date'])) {
+        setcookie('res_date');
+        setcookie('res_heure');
+        setcookie('res_personnes');
+        unset($_COOKIE['res_date']);
+        unset($_COOKIE['res_heure']);
+        unset($_COOKIE['res_personnes']);
+    } ?>
     <div class="container-fluid">
         <div class="row">
             <div class="contact container col-md-5 col-sm-12">
